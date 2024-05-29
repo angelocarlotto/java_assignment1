@@ -2,11 +2,10 @@ package converter_pk;
 
 public class Converter {
 
-    private static Converter converter= new Converter();
 
 
     public static float ConvertKGToLP(float kilogramsValue) {
-        return converter.getPoundValue(kilogramsValue);
+        return getPoundValue(kilogramsValue);
     }
 
     public static float ConvertLPToKG(float poundsValue) {
@@ -21,19 +20,19 @@ public class Converter {
         return 0;
     }
 
-    private float getKilogramsValue(float poundsValue) {
+    private static float getKilogramsValue(float poundsValue) {
         return 0;
     }
 
-    private float getPoundValue(float kilogramsValue) {
+    private static float getPoundValue(float kilogramsValue) {
         return (float) (kilogramsValue * 2.2046226218);
     }
 
-    private float getFahenheitValue(float celciusValue) {
+    private static float getFahenheitValue(float celciusValue) {
         return 0;
     }
 
-    private float getCelciusValue(float fahenheitValue) {
+    private static float getCelciusValue(float fahenheitValue) {
         return 0;
     }
 }
