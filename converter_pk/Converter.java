@@ -2,11 +2,8 @@ package converter_pk;
 
 public class Converter {
 
-    private static Converter converter;
+    private static Converter converter= new Converter();
 
-    public Converter() {
-        converter = new Converter();
-    }
 
     public static float ConvertKGToLP(float kilogramsValue) {
         return converter.getPoundValue(kilogramsValue);
@@ -29,7 +26,7 @@ public class Converter {
     }
 
     private float getPoundValue(float kilogramsValue) {
-        return 0;
+        return (float) (kilogramsValue * 2.2046226218);
     }
 
     private float getFahenheitValue(float celciusValue) {
