@@ -29,6 +29,7 @@ public class TestConverter {
                             .println(String.valueOf(mass) + "KG is " + Converter.getMass(mass, choice) + " LP");
                     break;
                 default:
+                    System.err.println("Invalid Choice! Only 1 or 2 is allowed");
                     break;
             }
 
@@ -49,6 +50,7 @@ public class TestConverter {
                             .println(String.valueOf(temp) + "FH is " + Converter.getTemperature(temp, choice) + " CS");
                     break;
                 default:
+                    System.err.println("Invalid Choice! Only 1 or 2 is allowed");
                     break;
             }
 

@@ -67,7 +67,7 @@ public class Converter {
     }
 
     private static double getPoundValue(double kilogramsValue) {
-        return kilogramsValue * 2.2046226218;
+        return kilogramsValue * 2.2;
     }
 
     private static double getFahenheitValue(double celciusValue) {
