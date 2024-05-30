@@ -1,4 +1,4 @@
-import converter_pk.Converter;
+package src.converter_pk;
 
 public class TestConverter {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package converter_pk;
+package src.converter_pk;
 
 public class Converter {
 
