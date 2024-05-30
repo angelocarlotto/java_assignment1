@@ -1,23 +1,57 @@
 package converter_pk;
 
+import java.util.Scanner;
+
 public class TestConverter {
     public static void main(String[] args) {
+        int converterOption = 0;
+        Scanner myObj = new Scanner(System.in);
         System.out.println("Celsius to Fahereiht:" + Converter.getTemperature(10, 1));
         System.out.println("Fahereits to Celsius:" + Converter.getTemperature(10, 2));
         System.out.println("Kilograms to Pounds:" + Converter.getMass(10, 2));
         System.out.println("Pounds to Kilograms:" + Converter.getMass(10, 1));
 
-        // Ask the user:// to enter '1' for weight converting, or '2' for temperature
-        // converting:// Save the user's choice/input:// Main if Block:If(choiceis1){//
-        // this choice for calculating the mass (weight)// Ask the user to input a
-        // mass/weight value// Ask the user to input 1 for... or 2 for.../** Build the
-        // switch statement with 3 cases:* Case 1 => for getting the KG value* Case 2 =>
-        // for getting the LB value* Default => Output a warning/error
-        // message*/}elseif(choiceis2){// this choice for calculating the temperature//
-        // Ask the user to input a temperature value// Ask the user to input 1 for... or
-        // 2 for.../** Build the switch statement with 3 cases:* Case1 => for getting
-        // the F temp value* Case 2 => for getting the C temp value* Default=> Output a
-        // warning/error message*/}else{// output a simple message to show that the
-        // user’s input was invalid}(30Marks)Happy Coding ☺
+        System.out.println("Enter '1' for weight converting, or '2' for temperature converting:");
+        converterOption = myObj.nextInt();
+
+        if (converterOption == 1) {
+            System.out.println(" Enter a mass value:");
+            double mass = myObj.nextDouble();
+            System.out.println("Enter '1' for converting LB to KG, or '2' for converting KG to LB:");
+            int choice = myObj.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out
+                            .println(String.valueOf(mass) + "LB is " + Converter.getMass(mass, choice) + " KG");
+                    break;
+                case 2:
+                    System.out
+                            .println(String.valueOf(mass) + "KG is " + Converter.getMass(mass, choice) + " LP");
+                    break;
+                default:
+                    break;
+            }
+
+        } else if (converterOption == 2) {
+
+            System.out.println(" Enter a temperature value:");
+            double temp = myObj.nextDouble();
+            System.out.println("Enter '1' for converting CS to FH, or '2' for converting FH to CS:");
+            int choice = myObj.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out
+                            .println(String.valueOf(temp) + "CS is " + Converter.getTemperature(temp, choice) + " FH");
+
+                    break;
+                case 2:
+                    System.out
+                            .println(String.valueOf(temp) + "FH is " + Converter.getTemperature(temp, choice) + " CS");
+                    break;
+                default:
+                    break;
+            }
+
+        }
     }
 }
