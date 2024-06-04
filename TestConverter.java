@@ -6,12 +6,6 @@ public class TestConverter {
         int converterOption = 0;
         Scanner myObj = new Scanner(System.in);
        
-       /* 
-       System.out.println("Celsius to Fahereiht:" + Converter.getTemperature(10, 1));
-        System.out.println("Fahereits to Celsius:" + Converter.getTemperature(10, 2));
-        System.out.println("Kilograms to Pounds:" + Converter.getMass(10, 2));
-        System.out.println("Pounds to Kilograms:" + Converter.getMass(10, 1));
-        */
         System.out.println("Enter '1' for weight converting, or '2' for temperature converting:");
         converterOption = myObj.nextInt();
 
