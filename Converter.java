@@ -44,23 +44,6 @@ public class Converter {
         return massResult;
     }
 
-    /*
-     * public static double ConvertKGToLP(double kilogramsValue) {
-     * return getPoundValue(kilogramsValue);
-     * }
-     * 
-     * public static double ConvertLPToKG(double poundsValue) {
-     * return 0;
-     * }
-     * 
-     * public static double ConvertCLToFAH(double celsiusValue) {
-     * return 0;
-     * }
-     * 
-     * public static double ConvertFAHToCL(double fahrenheitValue) {
-     * return 0;
-     * }
-     */
     private static double getKilogramsValue(double poundsValue) {
         return poundsValue / 2.2;
     }
@@ -70,10 +53,11 @@ public class Converter {
     }
 
     private static double getFahenheitValue(double celciusValue) {
-        return celciusValue * 9 / 5 + 32;
+        return ((celciusValue * 9) / 5) + 32;
     }
 
     private static double getCelciusValue(double fahenheitValue) {
-        return 0;
+        return (fahenheitValue - 32) * 5 / 9;
     }
+
 }
